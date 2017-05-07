@@ -1,1 +1,0 @@
-/usr/bin/c++   -m32 -fno-rtti -std=c++11 -Wall -Wextra   CMakeFiles/llvm-slicer.dir/llvm-slicer.cpp.o  -o llvm-slicer  -L/usr/local/lib  -L/home/david/tau/llvm-3.4.obj.cmake/lib -rdynamic ../src/libLLVMdg.so ../src/libLLVMpta.so ../src/libPTA.so ../src/libRD.so -Wl,-rpath,/usr/local/lib:/home/david/tau/llvm-3.4.obj.cmake/lib:/home/david/tau/dg/build/src: 

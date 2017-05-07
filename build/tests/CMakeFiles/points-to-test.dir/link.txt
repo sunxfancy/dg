@@ -1,1 +1,0 @@
-/usr/bin/c++   -m32 -fno-rtti -std=c++11 -Wall -Wextra -O2   CMakeFiles/points-to-test.dir/points-to-test.cpp.o  -o points-to-test  -L/usr/local/lib  -L/home/david/tau/llvm-3.4.obj.cmake/lib -rdynamic ../src/libPTA.so -Wl,-rpath,/usr/local/lib:/home/david/tau/llvm-3.4.obj.cmake/lib:/home/david/tau/dg/build/src 
