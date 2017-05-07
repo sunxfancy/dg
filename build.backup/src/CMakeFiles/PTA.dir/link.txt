@@ -1,1 +1,0 @@
-/usr/bin/c++  -fPIC -m32 -fno-rtti -std=c++11 -Wall -Wextra  -shared -Wl,-soname,libPTA.so -o libPTA.so CMakeFiles/PTA.dir/analysis/PointsTo/Pointer.cpp.o CMakeFiles/PTA.dir/analysis/PointsTo/PointerAnalysis.cpp.o  -L/usr/local/lib  -L/home/david/tau/llvm-3.4.obj.cmake/lib 

@@ -1,1 +1,0 @@
-/usr/bin/c++  -fPIC -m32 -fno-rtti -std=c++11 -Wall -Wextra  -shared -Wl,-soname,libRD.so -o libRD.so CMakeFiles/RD.dir/analysis/ReachingDefinitions/ReachingDefinitions.cpp.o CMakeFiles/RD.dir/analysis/ReachingDefinitions/RDMap.cpp.o  -L/usr/local/lib  -L/home/david/tau/llvm-3.4.obj.cmake/lib 
