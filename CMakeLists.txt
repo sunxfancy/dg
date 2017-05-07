@@ -112,5 +112,5 @@ message(STATUS "CMAKE_INSTALL_LIBDIR: \"${CMAKE_INSTALL_LIBDIR}\"")
 message(STATUS "CMAKE_INSTALL_INCLUDEDIR: \"${CMAKE_INSTALL_INCLUDEDIR}\"")
 
 add_subdirectory(src)
-add_subdirectory(tests EXCLUDE_FROM_ALL)
-add_subdirectory(tools)
+#add_subdirectory(tests EXCLUDE_FROM_ALL)
+#add_subdirectory(tools)
