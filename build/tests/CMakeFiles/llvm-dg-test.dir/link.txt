@@ -1,0 +1,1 @@
+/usr/bin/c++   -m32 -fno-rtti -std=c++11 -Wall -Wextra -O2   CMakeFiles/llvm-dg-test.dir/llvm-dg-test.cpp.o  -o llvm-dg-test  -L/usr/local/lib  -L/home/david/tau/llvm-3.4.obj.cmake/lib -rdynamic ../src/libLLVMdg.so ../src/libLLVMpta.so ../src/libPTA.so ../src/libRD.so -Wl,-rpath,/usr/local/lib:/home/david/tau/llvm-3.4.obj.cmake/lib:/home/david/tau/dg/build/src 

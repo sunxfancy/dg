@@ -1,0 +1,1 @@
+/usr/bin/c++   -m32 -fno-rtti -std=c++11 -Wall -Wextra -O2   CMakeFiles/dg-test.dir/dg-test.cpp.o  -o dg-test  -L/usr/local/lib  -L/home/david/tau/llvm-3.4.obj.cmake/lib -rdynamic 
