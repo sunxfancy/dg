@@ -202,12 +202,12 @@ private:
     
     llvm::Value *getClonedValue(llvm::Function *f, llvm::Value *value, uint32_t sliceId) {
         using namespace llvm;
-        Cloner::SliceInfo *si = cloner->getSlice(f, sliceId);
+        Cloner::SliceInfo *si = cloner->getSliceInfo(f, sliceId);
         if (!si) {
             return value;
         }
 
-        ValueToValueMapTy &vmap = *(si->second);
+        ValueToValueMapTy &vmap = *(si->v2vmap);
         if (vmap.find(value) == vmap.end()) {
             return value;
         }
@@ -218,11 +218,11 @@ private:
 
     llvm::Function *getClonedFunction(llvm::Function *f, uint32_t sliceId) {
         using namespace llvm;
-        Cloner::SliceInfo *si = cloner->getSlice(f, sliceId);
+        Cloner::SliceInfo *si = cloner->getSliceInfo(f, sliceId);
         if (!si) {
             return f;
         }
-        return si->first;
+        return si->f;
     }
 
     llvm::Value *getClonedValue(llvm::Value *value, uint32_t sliceId) {
