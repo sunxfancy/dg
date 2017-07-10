@@ -88,7 +88,7 @@ LLVMPointerSubgraphBuilder::handleGlobalVariableInitializer(const llvm::Constant
     } else if (!isa<ConstantInt>(C) && !isa<ConstantFP>(C)) {
         llvm::errs() << *C << "\n";
         llvm::errs() << "ERROR: ^^^ global variable initializer not handled\n";
-        abort();
+        //abort();
     }
 
     return last;
