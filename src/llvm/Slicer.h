@@ -37,7 +37,7 @@
 #include "LLVMDependenceGraph.h"
 #include "LLVMNode.h"
 
-#include <Cloner.h>
+#include <klee/Internal/Analysis/Cloner.h>
 
 namespace dg {
 
