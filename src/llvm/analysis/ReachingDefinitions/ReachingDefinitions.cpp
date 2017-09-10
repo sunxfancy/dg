@@ -868,8 +868,8 @@ LLVMRDBuilder::createCall(const llvm::Instruction *Inst)
 
         if (!ret_call) {
             assert(!call_funcptr);
-            llvm::errs() << "Function pointer call with no compatible pointer: "
-                         << *CInst << "\n";
+            //llvm::errs() << "Function pointer call with no compatible pointer: "
+            //             << *CInst << "\n";
 
             RDNode *n = createUndefinedCall(CInst);
             return std::make_pair(n, n);

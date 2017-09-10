@@ -1415,8 +1415,7 @@ LLVMPointerSubgraphBuilder::buildInstruction(const llvm::Instruction& Inst)
                 node = createUnknown(&Inst);
             break;
         default:
-            llvm::errs() << Inst << "\n";
-            assert(0 && "Unhandled instruction");
+	     llvm::errs() << "Unhandled instruction" << Inst << "\n";
             node = createUnknown(&Inst);
     }
 
