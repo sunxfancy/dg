@@ -62,7 +62,7 @@ if (LLVM_DG)
 	  message(STATUS "Looking for libraries in: ${LLVM_LIBRARY_DIRS}")
 	endif(LLVM_BUILD_PATH)
 
-	add_definitions(${LLVM_DEFINITIONS})
+	# add_definitions(${LLVM_DEFINITIONS})
 
 	if (NOT ${LLVM_PACKAGE_VERSION} VERSION_LESS "3.5")
 		llvm_map_components_to_libnames(llvm_libs support core

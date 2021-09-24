@@ -24,7 +24,7 @@
 #include <llvm/IR/Instructions.h>
 #include <llvm/Support/raw_ostream.h>
 
-#include <llvm/Support/ValueHandle.h>
+#include <llvm/IR/ValueHandle.h>
 #include <llvm/Transforms/Utils/ValueMapper.h>
 
 #if (__clang__)
@@ -37,7 +37,6 @@
 #include "LLVMDependenceGraph.h"
 #include "LLVMNode.h"
 
-#include <klee/Internal/Analysis/Cloner.h>
 
 namespace dg {
 

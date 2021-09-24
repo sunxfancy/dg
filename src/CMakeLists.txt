@@ -1,6 +1,6 @@
 if (LLVM_DG)
 
-add_library(PTA SHARED
+add_library(PTA 
 	analysis/SubgraphNode.h
 	analysis/Offset.h
 	analysis/PointsTo/Pointer.h
@@ -12,7 +12,7 @@ add_library(PTA SHARED
 	analysis/PointsTo/PointsToFlowSensitive.h
 )
 
-add_library(RD SHARED
+add_library(RD 
 	analysis/SubgraphNode.h
 	analysis/Offset.h
 	analysis/ReachingDefinitions/ReachingDefinitions.h
@@ -21,7 +21,7 @@ add_library(RD SHARED
 	analysis/ReachingDefinitions/RDMap.cpp
 )
 
-add_library(LLVMpta SHARED
+add_library(LLVMpta 
 	llvm/analysis/PointsTo/PointsTo.h
 	llvm/analysis/PointsTo/PointerSubgraph.h
 	llvm/analysis/PointsTo/PointerSubgraph.cpp
@@ -31,18 +31,8 @@ add_library(LLVMpta SHARED
 
 target_link_libraries(LLVMpta PUBLIC PTA)
 
-# We need all the symbols with dynamic libs. With static libs, we get errors.
-if (BUILD_SHARED_LIBS)
-	if (${LLVM_PACKAGE_VERSION} VERSION_GREATER "3.4")
-		llvm_map_components_to_libnames(LP_llvm_libs core support)
-	else()
-		llvm_map_components_to_libraries(LP_llvm_libs core support)
-	endif()
 
-	target_link_libraries(LLVMpta PUBLIC ${LP_llvm_libs})
-endif()
-
-add_library(LLVMdg SHARED
+add_library(LLVMdg 
 	BBlock.h
 	Node.h
 	DependenceGraph.h
@@ -76,7 +66,7 @@ add_library(LLVMdg SHARED
 )
 
 #target_link_libraries(LLVMdg PUBLIC LLVMpta RD ${llvm_libs})
-target_link_libraries(LLVMdg PUBLIC LLVMpta RD)
+# target_link_libraries(LLVMdg PUBLIC LLVMpta RD)
 
 install(TARGETS LLVMdg LLVMpta PTA RD
 	LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
