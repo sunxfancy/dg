@@ -13,7 +13,7 @@ using dg::analysis::rd::LLVMReachingDefinitions;
 namespace llvm {
     class DataLayout;
     class ConstantExpr;
-};
+}
 
 namespace dg {
 

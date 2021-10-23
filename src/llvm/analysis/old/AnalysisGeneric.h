@@ -11,7 +11,7 @@ namespace llvm {
     class Value;
     class ConstantExpr;
     class DataLayout;
-};
+}
 
 namespace dg {
 
